@@ -21,11 +21,18 @@ public class Student {
 	public void setTotalMark(int totalMark) {
 		this.totalMark = totalMark;
 	}
-
+	/**
+	 * Calculates and returns the grade of the student based on the total mark.
+	 * @return the grade of the student
+	 */
 	public String getGrade() {
 		calculateGrade_GPA();
 		return grade;
 	}
+	/**
+	 * Calculates and returns the GPA (Grade Point Average) of the student based on the total mark.
+	 * @return the GPA of the student
+	 */
 
 	public double getGPA() {
 		calculateGrade_GPA();
@@ -39,7 +46,10 @@ public class Student {
 	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
-	
+	/**
+	 * Returns the length of the student's name.
+	 * @return the length of the student's name
+	 */
 	public int getStudentNameLength()
 	{
 		return studentName.length();
@@ -85,13 +95,17 @@ public class Student {
 		this.finalExamMark = finalExamMark;
 	}
 	
-	
+	/**
+	 * Calculates the total mark by summing up the marks from activities, practical, midterm exam, and final exam.
+	 */
 	public void calculateFullMark()
 	{
 		totalMark = activitiesMark + practicalMark 
 				+ finalExamMark + midtermExamMark;
 	}
-	
+	/**
+	 * Calculates the grade and GPA based on the total mark.
+	 */
 	public void calculateGrade_GPA() 
 	{
 		
@@ -158,6 +172,13 @@ public class Student {
 	
 	
 	/******************************** TESTING FUNCTIONS *********************************/
+	
+/**
+ * Checks if the provided name is valid. It should not be empty, should not start with a space,
+ * and should contain only alphabetic characters or spaces.
+ * @param name the name to be checked
+ * @return true if the name is valid, false otherwise
+ */
 
 	public boolean checkStudentName(String name)
 	{
@@ -187,9 +208,12 @@ public class Student {
 	}
 	
 	
-	/* The length of Student number field must be Alphanumeric characters of exact length of 8 characters.
-	 * It should start with numbers and might End with only one Alphabetic character
-	 */
+/**
+ * Checks if the provided student number is valid. It should be exactly 8 characters long,
+ * starting with numbers and optionally ending with one alphabetic character.
+ * @param studentNumber the student number to be checked
+ * @return true if the student number is valid, false otherwise
+ */
 	public boolean checkStudentNumber(String studentNumber)
 	{
 		/* The length must be exactly 8 Alphanumeric characters */
@@ -219,7 +243,12 @@ public class Student {
 	    return true;
 	}
 	
-	/* Activities Mark should be greater than 0 and smaller than or equal to 10  */
+/**
+ * Checks if the provided activities mark is valid. It should be greater than or equal to 0
+ * and less than or equal to 10.
+ * @param activitiesMark the activities mark to be checked
+ * @return true if the activities mark is valid, false otherwise
+ */
 	public boolean checkActivitiesMark(int activitiesMark)
 	{
 		if(!((activitiesMark >= 0) && (activitiesMark <=10)))
@@ -239,7 +268,12 @@ public class Student {
 		return true;
 	}
 	
-	/* Midterm Mark should be greater than 0 and smaller than or equal to 20  */
+/**
+ * Checks if the provided midterm exam mark is valid. It should be greater than or equal to 0
+ * and less than or equal to 20.
+ * @param midtermExamMark the midterm exam mark to be checked
+ * @return true if the midterm exam mark is valid, false otherwise
+ */
 	public boolean checkMidtermMark(int MidtermMark)
 	{
 		if(!((MidtermMark >= 0) && (MidtermMark <=20)))
@@ -249,7 +283,12 @@ public class Student {
 		return true;
 	}
 	
-	/* Final Mark should be greater than 0 and smaller than or equal to 60 */
+/**
+ * Checks if the provided final exam mark is valid. It should be greater than or equal to 0
+ * and less than or equal to 60.
+ * @param finalExamMark the final exam mark to be checked
+ * @return true if the final exam mark is valid, false otherwise
+ */
 	public boolean checkFinalMark(int FinalMark)
 	{
 		if(!((FinalMark >= 0) && (FinalMark <=60)))
