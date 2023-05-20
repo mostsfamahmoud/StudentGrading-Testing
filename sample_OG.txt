@@ -1,0 +1,6 @@
+Software Testing, CSE337s, 100
+Engy Mohamed, 1900630s, 10 ,7 ,12 , 55
+Aliaa Nabil, 1900949s, 8, 8, 15, 60
+Esraa Amr Abdelmoneam , 1900061s, 10, 10, 12, 55
+Abdelrahman Ali Mohammed Ali, 1900913s, 10, 10 , 20, 45
+Mostafa Mahmoud Ali Ahmed, 1900034s, 10, 10, 20, 45
