@@ -31,18 +31,11 @@ public class Subject {
 		return fullMark;
 	}
 
-/*
-	@Override
-	public String toString() {
-		return "SubjectName -> " + subjectName + "\nSubjectCode -> " + subjectCode + "\nFullMark -> " + fullMark;
-	}
-	*/
-	
 	/*
-
-2. Subject-code: It must be 6-7 Alphanumeric characters. The first 3 are Alphabetic followed by 3 numeric characters. 
-The sevens should be s if exists
-*/
+	 * Checks if the subject name is valid.
+	 * Subject name should not be empty, should not start with a space,
+	 * and should contain only alphabetic characters or spaces.
+	 */
 
 	
 	public boolean checkSubjectName(String subjectName)
@@ -74,9 +67,10 @@ The sevens should be s if exists
 		return true;
 	}
 
-	/*  Subject-code: It must be 6-7 Alphanumeric characters. The first 3 are Alphabetic
-    					followed by 3 numeric characters. The sevens should be s if exists. 
-    */
+	/*
+	 * Checks if the subject code length is valid.
+	 * Subject code should be exactly 6 or 7 characters long.
+	 */
 	
 	public boolean subjectCodeLength(String subjectCode) {
 		
@@ -87,7 +81,10 @@ The sevens should be s if exists
 		return true;
 	}
 	
-	
+	/*
+	 * Checks if the alphabetic part of the subject code is valid.
+	 * The first 3 characters of the subject code should be alphabetic.
+	 */
 	public boolean subjectCodeAlphabeticPart(String subjectCode) {
 		String alphabeticPart = subjectCode.substring(0, 3);
 		for (int i = 0; i < alphabeticPart.length(); i++) {
@@ -102,7 +99,10 @@ The sevens should be s if exists
 	}
 	
 
-	
+	/*
+	 * Checks if the numeric part of the subject code is valid.
+	 * The next 3 characters after the alphabetic part should be numeric.
+	 */
 	public boolean subjectCodeNumericPart(String subjectCode) {
 		String numericPart = subjectCode.substring(3,6);
 		// Check if the numeric part of the string is numeric
@@ -112,7 +112,10 @@ The sevens should be s if exists
 		}
 		return true;
 	}
-	
+	/*
+	 * Checks if the last character of the subject code is valid.
+	 * The last character should be 's' if it exists.
+	 */
 	public boolean subjectCodeLastChar(String subjectCode) {
 		// Check for the last char
 		if (subjectCode.length() == 7) 
